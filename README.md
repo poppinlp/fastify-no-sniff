@@ -27,7 +27,7 @@ Bytes/Sec    4.53 MB 170 kB  4.63 MB
 609k requests in 20s, 90.7 MB read
 ```
 
-Benchmark with x-xss-protection as middleware:
+Benchmark with dont-sniff-mimetype as middleware:
 
 ```txt
 Running 20s test @ http://127.0.0.1:10290/pudge/rest/v0/benchmark
