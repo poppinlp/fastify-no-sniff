@@ -1,0 +1,4 @@
+Average req/sec in 5 times 10s test
+with no plugin: 32155.86
+with dont-sniff-mimetype middleware: 30094.81
+with fastify-xss-filter plugin: 32089.43
