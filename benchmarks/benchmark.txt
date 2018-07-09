@@ -1,4 +1,8 @@
-Average req/sec in 5 times 10s test
-with no plugin: 32155.86
-with dont-sniff-mimetype middleware: 30094.81
-with fastify-xss-filter plugin: 32089.43
+node version: v10.6.0
+platform: darwin
+cpus: [{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":77177580,"nice":0,"sys":42101790,"idle":303622840,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":42794060,"nice":0,"sys":18083160,"idle":362003050,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":74487830,"nice":0,"sys":35590160,"idle":312802330,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":43626630,"nice":0,"sys":17576880,"idle":361676720,"irq":0}}]
+
+Average req/sec in 3 times 10s test
+with no plugin: 22867.43
+with dont-sniff-mimetype middleware: 19315.80
+with fastify-xss-filter plugin: 21087.80

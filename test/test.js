@@ -12,30 +12,16 @@ test.beforeEach(t => {
 	t.context.app = app;
 });
 
-test.cb('default', t => {
-	const { app } = t.context;
+const mock = async (t, opts, expected) => {
+	const rsp = await t.context.app.register(plugin, opts).inject({
+		method: 'get',
+		url: '/'
+	});
+	const header = rsp.headers['x-content-type-options'];
 
-	t.plan(3);
-	app.register(plugin);
-	app.inject(
-		{
-			method: 'GET',
-			url: '/'
-		},
-		(err, res) => {
-			const expected = {
-				payload: 'hello world',
-				header: 'nosniff'
-			};
-			const target = {
-				payload: res.payload,
-				header: res.headers['x-content-type-options']
-			};
+	t.is(header, expected);
+};
 
-			t.is(err, null, 'should throw no error');
-			t.is(target.payload, expected.payload, 'should have expected response payload');
-			t.is(target.header, expected.header, 'should have expected response header');
-			t.end();
-		}
-	);
+test('should set header properly', async t => {
+	await mock(t, {}, 'nosniff')
 });

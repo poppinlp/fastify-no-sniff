@@ -17,6 +17,11 @@ You may know [dont-sniff-mimetype](https://github.com/helmetjs/dont-sniff-mimety
 
 You may find the reason in [benchmark result](./benchmarks/benchmark.txt) and wish you like it. :)
 
+## Difference
+
+This plugin has passed all [dont-sniff-mimetype](https://github.com/helmetjs/dont-sniff-mimetype) test cases.
+And no difference in options.
+
 ## Install
 
 Via npm:
